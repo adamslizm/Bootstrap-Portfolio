@@ -19,6 +19,10 @@ body {
   clear: both;
 }
 
+.navbar-nav {
+  padding-top: 20px;
+}
+
 h1,
 h2,
 h3,
@@ -26,7 +30,7 @@ p {
   margin-bottom: 20px;
 }
 
-p:last-child {
+p last-child {
   margin-bottom: 0;
 }
 
@@ -50,10 +54,19 @@ h3 {
   font-size: 22px;
 }
 
+.responsive-headings(h3);
 /* header */
 
+.navbar {
+  width: 100%;
+}
+
+.navbar-top {
+  width: 100%;
+}
+
 #masthead {
-  position: fixed;
+  position: static;
   z-index: 99;
   width: 100%;
   margin: 0 0 30px;
@@ -65,7 +78,7 @@ h3 {
 
 #logo {
   float: left;
-  width: 250px;
+  width: 320px;
   height: 90px;
   font-family: Georgia, Times, "Times New Roman", serif;
   font-size: 30px;
@@ -75,9 +88,19 @@ h3 {
   text-align: center;
   text-decoration: none;
   background: #4aaaa5;
+  margin-left: 90px;
+}
+
+.navbar-brand 
+  first-child {
+  border-right: 0 none;
+  float: right;
+  padding-top: 10px;
+  margin-right: 90px;
 }
 
 nav {
+  position: static;
   float: right;
   margin-top: 25px;
 }
@@ -90,10 +113,6 @@ nav a {
   color: #999;
   text-decoration: none;
   border-left: 1px solid #efefef;
-}
-
-nav a:first-child {
-  border-left: 0 none;
 }
 
 /* footer */
@@ -112,20 +131,22 @@ footer {
 /* sidebar */
 
 .sidebar {
-  float: right;
+  float: left;
   width: 100%;
-  max-width: 270px;
-  padding: 30px;
+  max-width: 300px;
+  padding: 10px;
   margin-bottom: 20px;
   background: #fff;
   border: 1px solid #ddd;
+  margin: 30px;
+
 }
 
 h3,
 .sidebar h2 {
   padding-bottom: 20px;
   margin-bottom: 15px;
-  line-height: 22px;
+  line-height: 24px;
   border-bottom: 2px solid #eee;
 }
 
@@ -143,7 +164,8 @@ h3,
 /* main */
 
 #main-container {
-  padding-top: 130px;
+  padding-top: 150px;
+  margin-left: 90px;
 }
 
 .main-section {
@@ -196,6 +218,7 @@ h3,
   height: auto;
   margin-top: 10px;
   margin-right: 25px;
+  max-width: 640px;
 }
 
 /* contact page */
@@ -236,4 +259,22 @@ input[type=submit] {
   cursor: pointer;
   background: #4aaaa5;
   border: 0 none;
+}
+
+.img-responsive {
+  max-width: 640px;
+}
+
+@media screen and (max-width: 980px) {
+  body {background-color: #777;}
+}
+
+@media screen and (max-width: 768px) {
+  body {background-color: #666;}
+
+}
+
+@media screen and (max-width: 640px) {
+  body {background-color: #555;}
+
 }
